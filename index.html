@@ -1,0 +1,2187 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>/* ===================================
+   軽井沢旅行しおり
+=================================== */
+
+:root{
+
+    --main:#d89d9d;
+    --sub:#88a87d;
+    --bg:#fbf7f2;
+    --card:#ffffff;
+    --text:#555;
+    --line:#e7ddd3;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Zen Maru Gothic",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.9;
+
+}
+
+/*============================
+ HERO
+=============================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:
+    linear-gradient(rgba(255,255,255,.75),
+    rgba(255,255,255,.75)),
+    url(images/background.jpg);
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.hero-overlay{
+
+    max-width:900px;
+
+}
+
+.subtitle{
+
+    letter-spacing:5px;
+
+    color:var(--sub);
+
+    margin-bottom:10px;
+
+}
+
+.hero h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:72px;
+
+    color:var(--main);
+
+    margin-bottom:10px;
+
+}
+
+.hero h2{
+
+    font-size:24px;
+
+    margin-bottom:30px;
+
+    font-weight:400;
+
+}
+
+.cover-photo{
+
+    width:100%;
+
+    max-width:700px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:30px;
+
+}
+
+.hotel{
+
+    display:inline-block;
+
+    background:white;
+
+    padding:12px 30px;
+
+    border-radius:50px;
+
+    margin-bottom:25px;
+
+    box-shadow:var(--shadow);
+
+    color:var(--sub);
+
+    font-weight:bold;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    background:var(--main);
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    transform:translateY(-3px);
+
+    opacity:.9;
+
+}
+
+/*============================
+ SECTION
+=============================*/
+
+section{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:90px 25px;
+
+}
+
+section h2{
+
+    font-size:34px;
+
+    color:var(--main);
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+/*============================
+ CARD
+=============================*/
+
+.card{
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+/*============================
+ INFO GRID
+=============================*/
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.info-grid div{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.info-grid i{
+
+    font-size:38px;
+
+    color:var(--sub);
+
+    margin-bottom:15px;
+
+}
+
+.info-grid h3{
+
+    margin-bottom:10px;
+
+    color:var(--main);
+
+}
+/*============================
+ DAY TITLE
+=============================*/
+
+.day-title{
+
+    display:inline-block;
+
+    background:var(--main);
+
+    color:#fff;
+
+    padding:14px 36px;
+
+    border-radius:50px;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    margin-bottom:50px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+
+.day-title span{
+
+    display:block;
+
+    font-size:16px;
+
+    font-weight:400;
+
+    margin-top:4px;
+
+    letter-spacing:1px;
+
+}
+
+/*============================
+ TIMELINE
+=============================*/
+
+.timeline{
+
+    position:relative;
+
+    margin-top:40px;
+
+    padding-left:40px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:14px;
+
+    top:0;
+
+    bottom:0;
+
+    width:4px;
+
+    background:var(--line);
+
+    border-radius:10px;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    display:flex;
+
+    gap:24px;
+
+    margin-bottom:45px;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-33px;
+
+    top:18px;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:var(--main);
+
+    border:4px solid #fff;
+
+    box-shadow:0 0 0 4px var(--line);
+
+}
+
+.time{
+
+    min-width:80px;
+
+    font-weight:bold;
+
+    color:var(--sub);
+
+    font-size:18px;
+
+}
+
+.content{
+
+    flex:1;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.content:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.content h3{
+
+    color:var(--main);
+
+    margin-bottom:16px;
+
+    font-size:24px;
+
+}
+
+.content h3 i{
+
+    margin-right:10px;
+
+    color:var(--sub);
+
+}
+
+.content img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    margin:18px 0;
+
+    display:block;
+
+    object-fit:cover;
+
+    max-height:320px;
+
+}
+
+/*============================
+ MEMO
+=============================*/
+
+.memo{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#f5efe8;
+
+    color:var(--sub);
+
+    font-size:14px;
+
+}
+
+/*============================
+ SPOT CARD
+=============================*/
+
+.spot-card{
+
+    margin-top:22px;
+
+    padding:22px;
+
+    background:#fcfaf6;
+
+    border-left:6px solid var(--main);
+
+    border-radius:14px;
+
+}
+
+.spot-card strong{
+
+    display:block;
+
+    color:var(--main);
+
+    margin-bottom:12px;
+
+    font-size:18px;
+
+}
+
+.spot-card ul{
+
+    margin-left:20px;
+
+}
+
+.spot-card li{
+
+    margin-bottom:8px;
+
+}
+
+/*============================
+ CHECK LIST
+=============================*/
+
+.checklist{
+
+    background:#fffdfb;
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.list{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:18px;
+
+}
+
+.list label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#fff;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+}
+
+.list input{
+
+    width:22px;
+
+    height:22px;
+
+}
+
+/*============================
+ FOOTER
+=============================*/
+
+footer{
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    color:#999;
+
+    font-size:15px;
+
+}
+
+/*============================
+ DECORATION
+=============================*/
+
+.hero::before{
+
+    content:"🌿";
+
+    position:absolute;
+
+    left:6%;
+
+    top:60px;
+
+    font-size:48px;
+
+    opacity:.35;
+
+}
+
+.hero::after{
+
+    content:"🌸";
+
+    position:absolute;
+
+    right:8%;
+
+    bottom:80px;
+
+    font-size:56px;
+
+    opacity:.35;
+
+}
+
+/*============================
+ ANIMATION
+=============================*/
+
+.content,
+.card,
+.info-grid div{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*============================
+ RESPONSIVE
+=============================*/
+
+@media(max-width:768px){
+
+.hero{
+
+    min-height:auto;
+
+    padding:60px 20px;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+}
+
+.hero h2{
+
+    font-size:18px;
+
+}
+
+.day-title{
+
+    font-size:24px;
+
+}
+
+.timeline{
+
+    padding-left:24px;
+
+}
+
+.timeline-item{
+
+    display:block;
+
+}
+
+.time{
+
+    margin-bottom:12px;
+
+}
+
+.timeline::before{
+
+    left:6px;
+
+}
+
+.timeline-item::before{
+
+    left:-20px;
+
+}
+
+.content{
+
+    padding:22px;
+
+}
+
+.content h3{
+
+    font-size:20px;
+
+}
+
+section{
+
+    padding:70px 18px;
+
+}
+
+}
+/* フェードイン */
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* トップボタン */
+
+.top-button{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#d89d9d;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.3s;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.top-button.visible{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+/* 印刷ボタン */
+
+.print-button{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:95px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#88a87d;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+/* ライトボックス */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.8);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:9999;
+
+}
+
+.lightbox.open{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:15px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.4);
+
+}
+body{
+
+    background-color:#fbf7f2;
+
+    background-image:
+
+        radial-gradient(circle at 8% 10%, rgba(220,180,180,.18) 0 55px, transparent 56px),
+
+        radial-gradient(circle at 90% 15%, rgba(170,200,170,.18) 0 60px, transparent 61px),
+
+        radial-gradient(circle at 15% 85%, rgba(250,220,180,.15) 0 70px, transparent 71px),
+
+        radial-gradient(circle at 88% 90%, rgba(220,200,220,.15) 0 60px, transparent 61px);
+
+}
+.content img{
+
+    transition:.35s;
+
+    border:8px solid white;
+
+}
+
+.content img:hover{
+
+    transform:scale(1.03) rotate(-1deg);
+
+}
+.hero h1{
+
+    letter-spacing:4px;
+
+    text-shadow:
+
+        0 3px 8px rgba(255,255,255,.7);
+
+}
+
+.subtitle{
+
+    text-transform:uppercase;
+
+    font-size:18px;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+.content{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.content::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-60px;
+
+    right:-60px;
+
+    width:120px;
+
+    height:120px;
+
+    background:rgba(216,157,157,.08);
+
+    border-radius:50%;
+
+}
+.spot-card{
+
+    background:#fffaf5;
+
+    border-left:8px solid #d89d9d;
+
+}
+
+.spot-card li{
+
+    list-style:"🌿 ";
+
+}
+.day-title::before{
+
+    content:"🌿 ";
+
+}
+
+.day-title::after{
+
+    content:" 🌿";
+
+}
+.photo-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+.photo-card{
+
+background:white;
+
+border-radius:20px;
+
+padding:20px;
+
+box-shadow:var(--shadow);
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.photo-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.photo-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+margin-bottom:15px;
+
+}
+
+.budget table{
+
+width:100%;
+
+border-collapse:collapse;
+
+background:white;
+
+box-shadow:var(--shadow);
+
+}
+
+.budget th{
+
+background:#d89d9d;
+
+color:white;
+
+padding:15px;
+
+}
+
+.budget td{
+
+padding:15px;
+
+border-bottom:1px solid #eee;
+
+}
+
+.memo-box{
+
+height:180px;
+
+background:white;
+
+border-radius:20px;
+
+margin:20px 0;
+
+border:2px dashed #d89d9d;
+
+}</style></head><body><!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>軽井沢女子旅 しおり</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ====================== -->
+
+<header class="hero">
+
+<div class="hero-overlay">
+
+<div class="scroll-inner cover-inner">
+<div style="text-align:center; margin-top:14px;">
+<span class="eyebrow">trip guide</span>
+
+<h1>
+
+軽井沢
+
+</h1>
+
+
+<h2>
+<span class="memo">
+            2026.9.17(木)〜9.18(金)
+        </span>
+
+
+</h2>
+
+<img
+class="cover-photo"
+src="harunireterrace.jpg" alt="軽井沢">
+
+<p>
+
+わたしたちだけのとっておき<br>
+1泊2日のごほうび旅
+
+</p>
+
+<a href="#day1" class="button">
+
+しおりを見る
+
+</a>
+
+</div>
+
+</header>
+
+<!-- ====================== -->
+
+<section class="intro">
+
+<h2>
+
+Theme
+
+</h2>
+
+<div class="card">
+
+<p>
+
+ゆったり散策しながら<br>
+
+軽井沢の自然・グルメ<br>
+ショッピングを満喫する旅
+
+</p>
+
+</div>
+<h2>
+
+Spot
+
+</h2>
+
+<div class="info-grid">
+
+<div>
+
+<i class="fa-solid fa-palette"></i>
+
+<h3>
+
+Art
+
+</h3>
+
+<p>
+
+軽井沢ニューアート<br>
+ミュージアム
+
+</p>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-bicycle"></i>
+
+<h3>
+
+Nature
+
+</h3>
+
+<p>
+
+雲場池
+
+</p>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-tree"></i>
+
+<h3>
+
+Walking
+
+</h3>
+
+<p>
+
+旧軽井沢銀座
+
+</p>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-bag-shopping"></i>
+
+<h3>
+
+Shopping
+
+</h3>
+
+<p>
+
+プリンスショッピングプラザ
+
+</p>
+
+</div>
+
+</div>
+
+<div>
+
+<section class="intro">
+
+<h2>Hotel</h2>
+
+<div class="photo-card">
+
+<img
+class="cover-photo"
+src="hotel_exterior.jpg"
+alt="ホテル">
+
+<h3>
+
+TWIN-LINE HOTEL KARUIZAWA JAPAN<br>
+トゥインラインホテル 軽井沢 ジャパン<br>
+
+</h3>
+〒389-0100<br>
+　長野県北佐久郡軽井沢町軽井沢1151-11
+<br>軽井沢駅より徒歩7分 （500m）
+
+<br>TEL　0267-42-2121
+
+</div>
+
+
+
+</section>
+
+
+<!-- ====================== -->
+
+
+<section id="day1">
+
+<div class="day-title">
+
+DAY1
+
+<span>
+
+9/17(木)
+
+</span>
+
+</div>
+
+<div class="timeline">
+
+<!-- ===== DAY1 TIMELINE ===== -->
+
+<div class="timeline-item">
+
+    <div class="time">10:15</div>
+
+    <div class="content">
+
+        <h3>
+            <i class="fa-solid fa-train"></i>
+          　自宅 出発
+        </h3>
+
+        <img src="https://drive.google.com/uc?id=10ElvbweN-ZmOX82lFLzpqvZzSF910lIO" alt="新幹線">
+<div class="head">乗換ルート <span class="fare">所要 1時間35分 ／ IC 5,060円</span></div>
+            自宅 →（徒歩）→ 王子駅<br>
+            王子 10:15 → 大宮 10:44【京浜東北線】<br>
+            大宮 10:58 → 軽井沢 11:36【新幹線はくたか559号】
+           <p>
+            
+        </p>
+
+        <span class="memo">
+            🚄 約70分
+        </span>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">11:40</div>
+
+    <div class="content">
+
+        <h3>
+            <i class="fa-solid fa-store"></i>
+            軽井沢駅 到着
+        </h3>
+
+        <p>
+
+            いよいよ、軽井沢旅のはじまり。
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">12:00</div>
+
+    <div class="content">
+
+        <h3>
+
+            <i class="fa-solid fa-utensils"></i>
+
+            ランチ
+
+        </h3>
+
+        <img src="kawakamian_outside.jpg" alt="ランチ">
+
+        <p>
+
+            お蕎麦・イタリアンなど
+            気になるお店でランチ♪
+
+        </p>
+
+        <div class="spot-card">
+
+            <strong>おすすめ</strong>
+
+            <ul>
+
+                <li>川上庵</li>
+
+                <li>酢重正之商店</li>
+
+                <li>沢村ベーカリー</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">13:30</div>
+
+    <div class="content">
+
+        <h3>
+
+            <i class="fa-solid fa-palette"></i>
+
+            軽井沢ニューアートミュージアム
+
+        </h3>
+
+        <img src="new art museum.jpg" alt="美術館">
+
+        <p>
+
+            現代アートを楽しみながら
+            ゆっくり館内を散策。
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">15:00</div>
+
+    <div class="content">
+
+        <h3>
+
+            <i class="fa-solid fa-hotel"></i>
+
+            ホテルチェックイン
+
+        </h3>
+
+        <img src="hotel_room.jpg" alt="ホテル">
+
+        <p>
+
+            TWIN-LINE HOTEL KARUIZAWA
+
+        </p>
+
+        <div class="memo">
+
+            荷物を置いて少し休憩...
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">16:00</div>
+
+    <div class="content">
+
+        <h3>
+
+            <i class="fa-solid fa-bicycle"></i>
+
+            レンタサイクルで雲場池まで
+
+        </h3>
+
+        <img src="kumoba_pond.jpg" alt="レンタサイクル">
+
+        <p>
+
+            軽井沢の風を感じながら
+            のんびりサイクリング。
+
+
+        </p>
+
+<span class="memo">
+             約5分
+        </span>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">16:30</div>
+
+    <div class="content">
+
+        <h3>
+
+            <i class="fa-solid fa-tree"></i>
+
+            旧軽井沢銀座 散策
+
+        </h3>
+
+        <img src="oldkaruizawa_street.jpg" alt="旧軽井沢">
+
+        <p>
+
+            雑貨屋さんやカフェ巡ろう。
+
+            食べ歩きも。
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">19:00</div>
+
+    <div class="content">
+
+        <h3>
+
+            <i class="fa-solid fa-wine-glass"></i>
+
+            ディナー
+
+        </h3>
+
+        <img src="hotel_dinner.jpg" alt="ディナー">
+
+        <p>
+
+            ホテル内 Hose Luis 軽井沢でスパニッシュコースを堪能。
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">21:00</div>
+
+    <div class="content">
+
+        <h3>
+
+            <i class="fa-solid fa-bath"></i>
+
+            バスタイム
+
+        </h3>
+
+        
+        <p>
+
+            一日の疲れを癒しましょ。
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">22:00</div>
+
+    <div class="content">
+
+        <h3>
+
+            <i class="fa-solid fa-martini-glass"></i>
+
+            フリーラウンジ
+
+        </h3>
+
+        <img src="hotel_freeflow.jpg" alt="ラウンジ">
+
+        <p>
+
+            ドリンクやスナックのサービスが充実。
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">23:30</div>
+
+    <div class="content">
+
+        <h3>
+
+            <i class="fa-solid fa-moon"></i>
+
+            就寝
+
+        </h3>
+
+        <p>
+
+            楽しかったね♪ おやすみなさい。
+
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ====================== -->
+
+<section id="day2">
+
+<div class="day-title">
+
+DAY2
+
+<span>
+
+9/18(金)
+
+</span>
+
+</div>
+
+<!-- ===== DAY2 TIMELINE ===== -->
+
+<div class="timeline-item">
+
+    <div class="time">7:30</div>
+
+    <div class="content">
+
+        <h3>
+            <i class="fa-solid fa-sun"></i>
+            起床・身支度・荷造り
+        </h3>
+
+        <p>
+            軽井沢の爽やかな朝、ゆっくり身支度。
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">9:30</div>
+
+    <div class="content">
+
+        <h3>
+            <i class="fa-solid fa-mug-hot"></i>
+            ホテルモーニング
+        </h3>
+
+        <img src="hotel_morning.jpg" alt="朝食">
+
+        <p>
+            ホテル自慢の朝食で一日をスタート。
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">11:00</div>
+
+    <div class="content">
+
+        <h3>
+            <i class="fa-solid fa-suitcase-rolling"></i>
+            チェックアウト
+        </h3>
+
+        <p>
+            ホテルを出発。
+           
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">11:15</div>
+
+    <div class="content">
+
+        <h3>
+            <i class="fa-solid fa-bag-shopping"></i>
+            軽井沢・プリンスショッピングプラザ
+        </h3>
+
+        <img src="outlet.jpg" alt="ショッピング">
+
+        <p>
+            人気ブランドや雑貨店をゆっくり巡りながらショッピング。
+        </p>
+
+        <div class="spot-card">
+
+            <strong>おすすめショップ</strong>
+
+            <ul>
+                <li>AKOMEYA TOKYO</li>
+                <li>Afternoon Tea LIVING</li>
+                <li>Francfranc</li>
+                <li>LOWRYS FARM</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">12:30</div>
+
+    <div class="content">
+
+        <h3>
+            <i class="fa-solid fa-gift"></i>
+            お土産探し
+        </h3>
+
+        <img src="jam.jpg" alt="お土産">
+
+        <p>
+            軽井沢ならではのお菓子やジャムをお持ち帰り。
+        </p>
+
+        <div class="spot-card">
+
+            <strong>人気のお土産</strong>
+
+            <ul>
+                <li>沢屋ジャム</li>
+                <li>軽井沢チーズケーキ</li>
+                <li>ラスク</li>
+                <li>信州りんごのお菓子</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">14:00</div>
+
+    <div class="content">
+
+        <h3>
+            <i class="fa-solid fa-pizza-slice"></i>
+            ランチ
+        </h3>
+
+        <img src="atelier de fromage_pizza.jpg" alt="ランチ">
+
+        <p>
+            Atelier de Fromageでピッツァランチ。
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">14:45</div>
+
+    <div class="content">
+
+        <h3>
+            <i class="fa-solid fa-camera"></i>
+            駅周辺を散策
+        </h3>
+
+        <img src="cover_karuizawa_station.jpg" alt="軽井沢駅">
+
+        <p>
+            お土産の買い忘れをチェック！
+        </p>
+
+    </div>
+
+</div>
+
+<div class="timeline-item">
+
+    <div class="time">15:00</div>
+
+    <div class="content">
+
+        <h3>
+            <i class="fa-solid fa-train"></i>
+            軽井沢駅 出発
+        </h3>
+
+        <div class="route-box">
+            <div class="head">🚉 乗換ルート <span class="fare">所要 1時間52分 ／ IC 5,060円</span></div>
+            軽井沢 15:00 → 大宮 15:47【新幹線あさま620号】<br>
+            大宮 16:08 → 王子 16:38【京浜東北線】<br>
+            王子 →（徒歩）→ 自宅 16:52
+          
+
+        <p>
+            
+        </p>
+
+        <div class="memo">
+            🚄 お疲れさまでした！
+        </div>
+</div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ====================== -->
+
+<section class="checklist">
+
+<h2>
+
+持ち物チェック
+
+</h2>
+
+<div class="list">
+
+<label>
+
+<input type="checkbox">
+
+スマホ充電器
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+モバイルバッテリー
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+日焼け止め
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+折りたたみ傘
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+財布
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+Suica
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+カメラ
+
+</label>
+
+<label>
+
+<input type="checkbox">
+
+上着
+
+</label>
+
+</div>
+
+</section>
+<section>
+
+<h2>おすすめお土産</h2>
+
+<div class="photo-grid">
+
+<div class="photo-card">
+
+<img src="images/jam.jpg">
+
+<h3>沢屋ジャム</h3>
+
+</div>
+
+<div class="photo-card">
+
+<img src="images/rusk.jpg">
+
+<h3>ラスク</h3>
+
+</div>
+
+<div class="photo-card">
+
+<img src="images/apple.jpg">
+
+<h3>りんごバター</h3>
+
+</div>
+
+<div class="photo-card">
+
+<img src="images/cheese.jpg">
+
+<h3>チーズケーキ</h3>
+
+</div>
+
+</div>
+
+</section>
+<section class="budget">
+
+<h2>Budget</h2>
+
+<table>
+
+<tr>
+<th>項目</th>
+<th>金額</th>
+</tr>
+
+<tr>
+<td>交通費</td>
+<td>¥10,120</td>
+</tr>
+
+<tr>
+<td>ホテル</td>
+<td>¥19,500</td>
+</tr>
+
+<tr>
+<td>ランチ</td>
+<td>¥5,000</td>
+</tr>
+
+<tr>
+<td>ディナー</td>
+<td>Hotel込み</td>
+</tr>
+
+<tr>
+<td>ショッピング</td>
+<td>¥10,000</td>
+</tr>
+
+<tr>
+<td>合計</td>
+<td>¥44,620</td>
+</tr>
+
+</table>
+
+</section>
+<section class="budget">
+
+<h2>Gallery</h2>
+
+<div class="photo-card">
+
+<img src="st paul's catholic church.jpg">
+<div class="photo-card">
+<h3>聖パウロカトリック教会</h3><br>
+
+
+<p>
+
+
+<img src="shiraito_falls.jpg">
+
+<h3>白糸の滝</h3>
+
+</p>
+
+
+</div>
+<footer>
+
+<p>
+
+Have a wonderful trip.
+
+</p>
+
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<script>/* =====================================
+   軽井沢旅行しおり
+   script.js
+===================================== */
+
+// ================================
+// フェードインアニメーション
+// ================================
+
+const targets = document.querySelectorAll(
+  ".timeline-item, .card, .info-grid div, .checklist"
+);
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+
+  });
+}, {
+  threshold: 0.15
+});
+
+targets.forEach((target) => {
+
+  target.classList.add("fade");
+
+  observer.observe(target);
+
+});
+
+// ================================
+// チェックリスト保存
+// ================================
+
+const checks = document.querySelectorAll(
+  ".checklist input[type='checkbox']"
+);
+
+checks.forEach((check, index) => {
+
+  const saved = localStorage.getItem(
+    "karuizawa-check-" + index
+  );
+
+  if (saved === "true") {
+
+    check.checked = true;
+
+  }
+
+  check.addEventListener("change", () => {
+
+    localStorage.setItem(
+      "karuizawa-check-" + index,
+      check.checked
+    );
+
+  });
+
+});
+
+// ================================
+// ページトップへ戻るボタン
+// ================================
+
+const topButton = document.createElement("button");
+
+topButton.innerHTML = "↑";
+
+topButton.className = "top-button";
+
+document.body.appendChild(topButton);
+
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY > 300) {
+
+    topButton.classList.add("visible");
+
+  } else {
+
+    topButton.classList.remove("visible");
+
+  }
+
+});
+
+topButton.addEventListener("click", () => {
+
+  window.scrollTo({
+
+    top: 0,
+
+    behavior: "smooth"
+
+  });
+
+});
+
+// ================================
+// ライトボックス
+// ================================
+
+const overlay = document.createElement("div");
+
+overlay.className = "lightbox";
+
+overlay.innerHTML = `
+    <img src="" alt="">
+`;
+
+document.body.appendChild(overlay);
+
+const lightboxImage = overlay.querySelector("img");
+
+document.querySelectorAll(".content img").forEach((image) => {
+
+  image.style.cursor = "zoom-in";
+
+  image.addEventListener("click", () => {
+
+    lightboxImage.src = image.src;
+
+    overlay.classList.add("open");
+
+  });
+
+});
+
+overlay.addEventListener("click", () => {
+
+  overlay.classList.remove("open");
+
+});
+
+// ================================
+// 印刷ボタン
+// ================================
+
+const printButton = document.createElement("button");
+
+printButton.innerHTML =
+'<i class="fa-solid fa-print"></i>';
+
+printButton.className = "print-button";
+
+document.body.appendChild(printButton);
+
+printButton.addEventListener("click", () => {
+
+  window.print();
+
+});
+
+// ================================
+// 今日の日付表示（旅行中なら強調）
+// ================================
+
+const today = new Date();
+
+const month = today.getMonth() + 1;
+
+const date = today.getDate();
+
+if (month === 9 && date === 17) {
+
+  document.body.classList.add("day1");
+
+}
+
+if (month === 9 && date === 18) {
+
+  document.body.classList.add("day2");
+
+}</script></body></html>
